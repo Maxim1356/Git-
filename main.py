@@ -58,13 +58,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             qp.end()
 
     def drawCircle(self, qp: QPainter):
-        color = QColor(255, 255, 0)
+        color = QColor(randint(0, 255), randint(0, 255), randint(0, 255))
         qp.setPen(color)
         qp.setBrush(color)
         x, y = self.canvas.width(), self.canvas.height()
         radius = randint(50, 200)
         qp.drawEllipse(150, 150, radius, radius)
-
 
 
 if __name__ == '__main__':
